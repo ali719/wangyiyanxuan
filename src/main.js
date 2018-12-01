@@ -3,8 +3,12 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import store from './store'
+
+import 'swiper/dist/css/swiper.min.css'
 
 import './rem'
+import './mock/mockServer'
 
 Vue.config.productionTip = false
 
@@ -13,6 +17,7 @@ new Vue({
   el: '#app',
   components: { App },
   template: '<App/>',
-  router,
   render:h => h(App),
+  router,
+  store,
 })

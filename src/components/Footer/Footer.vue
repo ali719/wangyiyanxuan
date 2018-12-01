@@ -39,12 +39,14 @@
   @import "../../common/stylus/mixins.styl"
   #footer
     top-border-1px(#e4e4e4)
+    background-color #fff
     width 100%
     height 50px
     position fixed
     left 0
     bottom 0
     display flex
+    z-index 10
     .item
       display flex
       flex 1
