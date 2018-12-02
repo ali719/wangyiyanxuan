@@ -13,7 +13,7 @@
       <div class="swiper-wrapper">
         <div class="swiper-slide" v-for="(list,index) in newlist" :key="index">
           <div class="liContent">
-            <img :src="list.scenePicUrl" alt="">
+            <img v-lazy="list.scenePicUrl" alt="">
             <span class="name ellipsis">{{list.name}}</span>
             <span class="info ellipsis">{{list.simpleDesc}}</span>
             <span class="price">￥{{list.retailPrice}}</span>
@@ -35,7 +35,7 @@
         default: function () {
           return []
         }
-    }
+      }
     },
     mounted (){
       setTimeout(() =>{
@@ -77,6 +77,7 @@
     .swiper-container
       width 100%
       height 240px
+      background-color #fff
       .swiper-wrapper
         .swiper-slide
           width 160px

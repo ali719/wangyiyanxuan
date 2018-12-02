@@ -4,13 +4,13 @@
       <i class="iconfont icon-shouye3"></i>
       <span>首页</span>
     </span>
-    <span class="item" :class="{on:$route.path === '/classify'}" @click="goto('/classify')">
-       <i class="iconfont icon-iconyihuifu-"></i>
-       <span>分类</span>
-    </span>
     <span class="item" :class="{on:$route.path === '/thing'}" @click="goto('/thing')">
        <i class="iconfont icon-wupin"></i>
        <span>识物</span>
+    </span>
+    <span class="item" :class="{on:$route.path === '/classify'}" @click="goto('/classify')">
+       <i class="iconfont icon-iconyihuifu-"></i>
+       <span>分类</span>
     </span>
     <span class="item" :class="{on:$route.path === '/shopcart'}" @click="goto('/shopcart')">
        <i class="iconfont icon-gouwuche"></i>
@@ -44,9 +44,10 @@
     height 50px
     position fixed
     left 0
-    bottom 0
+    right 0
+    bottom -1px
     display flex
-    z-index 10
+    z-index 5
     .item
       display flex
       flex 1
@@ -56,7 +57,8 @@
       font-size 14px
       margin 7px
       &.on
-        color #B4282D
+        span,.iconfont
+          color #B4282D
       .iconfont
         font-size 22px
 </style>

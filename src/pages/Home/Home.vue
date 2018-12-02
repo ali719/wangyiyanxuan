@@ -1,5 +1,5 @@
 <template>
-  <div class="wrap">
+  <div id="home">
     <!--头部导航部分-->
     <header id="header">
       <!--严选logo及搜索框-->
@@ -103,9 +103,45 @@
       </div>
       <!--新品首发-->
       <NewItem :newlist="home.newItemList"/>
+      <!--人气推荐-->
       <PopularItem :poplist="poplist"/>
+      <!--严选限时购-->
+      <div class="flashSale">
+        <div class="time">
+          <div class="title">严选限时购</div>
+          <div class="countDown">
+            <span class="number">01</span>
+            <span class="symbol">:</span>
+            <span class="number">33</span>
+            <span class="symbol">:</span>
+            <span class="number">10</span>
+          </div>
+          <div class="next">下一场22:00开始</div>
+        </div>
+        <div class="saleImg">
+          <img src="./images/xiaolongxia.png" alt="">
+        </div>
+      </div>
+      <!--福利社-->
+      <img class="fuliImg" src="./images/fulishe.jpg" alt="">
+      <!--专题精选-->
+      <TopicList :topicList="home.topicList"/>
+      <!--居家好物-->
+      <CateList :cateList="home.cateList"/>
+      <!--版权信息-->
+      <div class="copyright">
+          <div class="link">
+            <a class="download">下载App</a>
+            <a class="pc">电脑版</a>
+          </div>
+          <span>网易公司版权所有 © 1997-2018</span>
+          <span>食品经营许可证：JY13301080111719</span>
+      </div>
       <router-view/>
     </section>
+    <div id="back">
+      <i class="iconfont icon-danjiantoushang"></i>
+    </div>
   </div>
 </template>
 
@@ -115,13 +151,16 @@
   import BannerList from './banner/banner.vue'
   import NewItem from './newItem/newItem.vue'
   import PopularItem from './popularItem/popularItem.vue'
+  import TopicList from './topicList/topicList.vue'
+  import CateList from './cateList/cateList.vue'
+  import Swiper from 'swiper'
   export default {
     data(){
       return{
 
       }
     },
-    async mounted (){
+    mounted (){
       //获取首页信息
       this.$store.dispatch('getHomeData')
     },
@@ -135,7 +174,9 @@
       BannerList,
       NavList,
       NewItem,
-      PopularItem
+      PopularItem,
+      TopicList,
+      CateList
     },
 
   }
@@ -144,7 +185,7 @@
 <style lang="stylus" rel="stylesheet/stylus" scoped>
   @import "../../common/stylus/mixins.styl"
 
-  .wrap
+  #home
     #header
       width 100%
       top-border-1px(#e4e4e4)
@@ -332,4 +373,87 @@
               font-size 12px
 
 
+      .flashSale
+        background-color #fff
+        height 160px
+        padding 10px
+        margin-top 10px
+        display flex
+        justify-content center
+        .time
+          width 160px
+          height 160px
+          display flex
+          flex-direction column
+          justify-content center
+          align-items center
+          .title
+            font-size 20px
+            font-weight 700
+            letter-spacing 5px
+            width 130px
+            height 40px
+            color #9B9B9B
+          .countDown
+            width 130px
+            height 40px
+            font-size 20px
+            font-weight 700
+            .number
+              background-color #444
+              color #fff
+              padding 0 3px
+          .next
+            font-size 12px
+            color #9B9B9B
+            width 130px
+            height 30px
+        .saleImg
+          width 160px
+          height 160px
+          img
+            width 100%
+            height 100%
+      .fuliImg
+        margin-top 10px
+        width 100%
+        height 150px
+      .copyright
+        width 100%
+        height 100px
+        padding-top 30px
+        background-color #414141
+        text-align center
+        .link
+          width 100%
+          height 30px
+          font-size 14px
+          margin-bottom 10px
+          a
+            display inline-block
+            width 75px
+            height 25px
+            line-height 25px
+            text-align center
+            border 1px solid #fff
+            margin 0 30px
+        span
+          vertical-align middle
+          display inline-block
+          height 20px
+          color #999
+          font-size 12px
+    #back
+      background-color #fff
+      width 50px
+      height 50px
+      line-height 50px
+      border-radius 50%
+      position fixed
+      bottom 55px
+      right 0
+      text-align center
+      z-index 10
+      .iconfont
+        font-size 34px
 </style>

@@ -3,7 +3,7 @@
   <div class="swiper-container" id="banner">
     <div class="swiper-wrapper">
       <div class="swiper-slide" v-for="(pic,index) in pics" :key="index">
-        <img :src="pic.picUrl" alt="">
+        <img v-lazy="pic.picUrl" alt="">
       </div>
     </div>
     <!-- 如果需要分页器 -->
@@ -45,7 +45,6 @@
   @import "../../../common/stylus/mixins.styl"
 
   .swiper-container
-    background-color pink
     width 100%
     height 200px
     img
