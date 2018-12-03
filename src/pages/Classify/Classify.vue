@@ -21,11 +21,11 @@
       <!--右侧内容区域-->
       <div class="detail" v-if="Detail">
         <div>
-        <img class="detailImg" v-lazy="Detail.bannerUrl" alt="">
+        <img class="detailImg" v-lazy="Detail.wapBannerUrl" :key="Detail.wapBannerUrl" alt="">
         <div class="detailTitle">{{Detail.name}}分类</div>
           <ul class="detailList">
             <li v-for="(cate,index) in Detail.subCateList" :key="index">
-              <img class="listImg" :src="cate.wapBannerUrl" alt="">
+              <img class="listImg" v-lazy="cate.wapBannerUrl" alt="">
               <span>{{cate.name}}</span>
             </li>
           </ul>
@@ -101,11 +101,11 @@
       justify-content center
       width 100%
       padding-bottom 50px
+      margin-top 45px
       .navigator
         width 80px
         height 550px
         border-right: 1px solid #e4e4e4
-        margin-top 45px
         .navList
           padding-top 15px
           width 100%
@@ -124,7 +124,6 @@
         width 275px
         height 550px
         padding 20px 10px
-        margin-top 45px
         .detailImg
           width 275px
           height 100px

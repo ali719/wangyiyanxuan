@@ -17,18 +17,30 @@ export default new VueRouter({
     {
       path:'/home',
       component:Home,
+      meta: {
+        showFoot: true
+      }
     },
     {
       path:'/classify',
       component:Classify,
+      meta: {
+        showFoot: true
+      }
     },
     {
       path:'/thing',
       component:Thing,
+      meta: {
+        showFoot: true
+      }
     },
     {
       path:'/shopcart',
       component:ShopCart,
+      meta: {
+        showFoot: true
+      }
     },
     {
       path:'/person',

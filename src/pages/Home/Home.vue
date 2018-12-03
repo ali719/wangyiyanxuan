@@ -184,11 +184,10 @@
 
 <style lang="stylus" rel="stylesheet/stylus" scoped>
   @import "../../common/stylus/mixins.styl"
-
   #home
     #header
       width 100%
-      top-border-1px(#e4e4e4)
+      bottom-border-1px(#e4e4e4)
       background-color #fff
       position fixed
       top 0
@@ -226,9 +225,7 @@
           font-size 11px
     #main
       background-color #F4F4F4
-      position relative
-      top 79px
-      left 0
+      margin-top 79px
       padding-bottom 50px
       .serve
         background-color #fff

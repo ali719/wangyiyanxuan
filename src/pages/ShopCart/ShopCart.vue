@@ -14,13 +14,18 @@
     <div class="cart_login">
       <img src="./images/cart.png" alt="">
       <span>去添加点什么吧</span>
-      <div class="login">登录</div>
+      <div class="login" @click="goto">登录</div>
     </div>
   </div>
 </template>
 
 <script>
   export default {
+    methods:{
+      goto(){
+        this.$router.replace('/person')
+      }
+    }
 
   }
 </script>

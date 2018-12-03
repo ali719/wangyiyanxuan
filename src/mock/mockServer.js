@@ -5,11 +5,12 @@
 import Mock from 'mockjs'
 import data from './datahome.json'//首页
 import navdata from './datanav.json'//分类
+import topicdata from './datatopic.json'//识物
 //首页轮播图
 Mock.mock('/focusList', {code: 0, data: data.focusList})
 //首页数据
 Mock.mock('/home', {code: 0, data: data})
 //分类
 Mock.mock('/classify', {code: 0, data: navdata.categoryL1List})
-
-
+// 识物
+Mock.mock('/thing', {code: 0, data: topicdata})

@@ -1,5 +1,6 @@
 {
-  "banner": [{
+  "banner": [
+    {
     "avatar": "",
     "color": "",
     "commentSwitch": false,
@@ -104,7 +105,8 @@
     "type": -1,
     "typeName": ""
   }],
-  "column": [{
+  "column": [
+    {
     "articleCount": "316篇文章",
     "linkUrl": "",
     "picUrl": "https://yanxuan.nosdn.127.net/254e04f823354c67d765d68c4012b64e.png",
@@ -169,7 +171,8 @@
     "topicId": "0",
     "type": -1
   }],
-  "findMore": [{
+  "findMore": [
+    {
     "avatar": "",
     "color": "",
     "commentSwitch": false,
@@ -195,7 +198,8 @@
     "topicTemplateId": 0,
     "type": 0,
     "typeName": ""
-  }, {
+  },
+    {
     "avatar": "",
     "color": "",
     "commentSwitch": false,
@@ -221,7 +225,8 @@
     "topicTemplateId": 0,
     "type": 0,
     "typeName": ""
-  }, {
+  },
+    {
     "avatar": "",
     "color": "",
     "commentSwitch": false,
@@ -247,7 +252,8 @@
     "topicTemplateId": 0,
     "type": 0,
     "typeName": ""
-  }, {
+  },
+    {
     "avatar": "",
     "color": "",
     "commentSwitch": false,
@@ -273,7 +279,8 @@
     "topicTemplateId": 0,
     "type": 0,
     "typeName": ""
-  }, {
+  },
+    {
     "avatar": "",
     "color": "",
     "commentSwitch": false,
@@ -299,7 +306,8 @@
     "topicTemplateId": 0,
     "type": 1,
     "typeName": ""
-  }, {
+  },
+    {
     "avatar": "",
     "color": "",
     "commentSwitch": false,
@@ -325,7 +333,8 @@
     "topicTemplateId": 0,
     "type": 0,
     "typeName": ""
-  }, {
+  },
+    {
     "avatar": "",
     "color": "",
     "commentSwitch": false,
@@ -351,7 +360,8 @@
     "topicTemplateId": 0,
     "type": 0,
     "typeName": ""
-  }, {
+  },
+    {
     "avatar": "",
     "color": "",
     "commentSwitch": false,
@@ -377,7 +387,8 @@
     "topicTemplateId": 0,
     "type": 0,
     "typeName": ""
-  }, {
+  },
+    {
     "avatar": "",
     "color": "",
     "commentSwitch": false,
@@ -407,7 +418,8 @@
   "hasMore": true,
   "recommend": {
     "name": "为你推荐",
-    "Item": [{
+    "Item": [
+      {
       "topicId": 2555,
       "title": "如何做清新的白衣少年",
       "subtitle": null,
@@ -433,7 +445,8 @@
       "color": null,
       "typeName": "严选推荐",
       "desc": null
-    }, {
+    },
+      {
       "topicId": 2564,
       "title": "今年世界杯喝什么？",
       "subtitle": null,
@@ -459,7 +472,8 @@
       "color": null,
       "typeName": "丁磊的好货推荐",
       "desc": null
-    }, {
+    },
+      {
       "topicId": 2513,
       "title": "没有软木拖，怎么过夏天",
       "subtitle": null,
@@ -485,9 +499,11 @@
       "color": null,
       "typeName": "挑款师推荐",
       "desc": null
-    }]
+    }
+    ]
   },
-  "tenfifteen": [{
+  "tenfifteen": [
+    {
     "desc": "你会选择怎么度过",
     "id": 192,
     "participantAvatar": [null, "http://yanxuan.nosdn.127.net/76f27e3e1319cea0f0bd220effbbd4c2", "https://yanxuan.nosdn.127.net/edb7f81b6262124a02de2a18c1da772c.jpg", null, null],
@@ -757,7 +773,8 @@
   ],
   "zhen": {
     "name": "严选臻品",
-    "Item": [{
+    "Item": [
+      {
         "avatar": "https://yanxuan.nosdn.127.net/77849c76206bd3d27044c25b45e82ebe.png",
         "color": "",
         "commentSwitch": false,

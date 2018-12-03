@@ -10,3 +10,5 @@ export const reqBannerList = () => ajax('/focusList')
 export const reqHomeData = () => ajax('/home')
 // 分类数据
 export const reqClassify = () => ajax('/classify')
+// 识物数据
+export const reqThing = () => ajax('/thing')

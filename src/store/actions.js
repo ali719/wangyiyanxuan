@@ -2,8 +2,8 @@
  Vuex最核心的管理对象
  */
 
-import {reqHomeData,reqClassify} from '../api'
-import {RECEIVE_HOME,RECEIVE_CLASSFIY,RECEIVE_NAVINDEX} from './mution-type'
+import {reqHomeData,reqClassify,reqThing} from '../api'
+import {RECEIVE_HOME,RECEIVE_CLASSFIY,RECEIVE_NAVINDEX,RECEIVE_THING} from './mution-type'
 export default {
   //异步获取首页数据
     async getHomeData({commit}){
@@ -24,6 +24,15 @@ export default {
   //同步获取分类下标
   getNavIndex({commit},index){
     commit(RECEIVE_NAVINDEX,{index})
-  }
+  },
+  
+  //异步获取识物数据
+  async getThingData({commit}){
+    const result =await reqThing()
+    if (result.code === 0){
+      const thing = result.data
+      commit(RECEIVE_THING,{thing})
+    }
+  },
 
 }

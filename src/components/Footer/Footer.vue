@@ -45,7 +45,7 @@
     position fixed
     left 0
     right 0
-    bottom -1px
+    bottom 0
     display flex
     z-index 5
     .item
