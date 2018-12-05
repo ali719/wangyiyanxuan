@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<div class="uesBox">
+  <div class="ife">
+    <div class="m-cnt">
+      <div class="login-form">
+        <div class="m-container">
+          <div class="inputbox">
+            <input type="tel" placeholder="请输入手机号"  ref="phone" @focus="focus" @blur="blur">
+          </div>
+          <div class="m-pccnt">
+            <div class="m-pcbox">
+              <div class="u-input">
+                <input type="tel" placeholder="请输入验证码" @focus="focus" @blur="blur" ref="yanzhengcode">
+              </div>
+              <div class="pcbtn">
+                <a href="javascript:;" class="tabfocus" @click="getPhone" ref="code">111</a>
+              </div>
+            </div>
+          </div>
+          <div class="m-nerror">
+            <div class="ferrorhead">
+              666
+            </div>
+          </div>
+          <div class="text">
+            <span class="tab0">使用密码验证登录</span>
+            <span class="tab1">遇到问题?</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

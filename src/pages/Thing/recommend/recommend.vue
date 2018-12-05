@@ -4,7 +4,7 @@
     <!--头部标题-->
     <div class="top">{{recommend.name}}</div>
     <!--白衣少年-->
-    <div class="yang">
+    <div class="yang" v-if="recommend.Item">
       <img class="recImg" :src="recommend.Item[0].picUrl">
       <div class="recText">
         <div class="recTitle">
@@ -15,7 +15,7 @@
       </div>
     </div>
     <!--丁三石的好货推荐-->
-    <div class="dinglei">
+    <div class="dinglei" v-if="recommend.Item">
       <div class="text">
         <div class="title">{{recommend.Item[1].title}}</div>
         <div class="info ellipsis">{{recommend.Item[1].subTitle}}</div>
@@ -26,7 +26,7 @@
       </div>
     </div>
     <!--挑款师推荐-->
-    <div class="dinglei">
+    <div class="dinglei" v-if="recommend.Item">
       <div class="text">
         <div class="title ellipsis">{{recommend.Item[2].title}}</div>
         <div class="info ellipsis">{{recommend.Item[2].subTitle}}</div>
@@ -43,9 +43,9 @@
   export default {
     props:{
       recommend: {
-        type: Array,
+        type: Object,
         default: function () {
-          return []
+          return {}
         }
       }
     },

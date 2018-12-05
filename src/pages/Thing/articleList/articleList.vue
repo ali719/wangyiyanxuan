@@ -1,5 +1,5 @@
 <template>
-  <div class="swiper-container" id="art">
+    <div class="swiper-container" id="art">
     <div class="swiper-wrapper">
       <div class="swiper-slide" v-for="(art,index) in column" :key="index">
         <div class="article">

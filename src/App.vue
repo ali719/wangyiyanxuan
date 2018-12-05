@@ -16,7 +16,4 @@ export default {
 
 <style lang="stylus" rel="stylesheet/stylus" scoped>
   @import "./common/stylus/mixins.styl"
-  #id
-    width 100%
-    height 100%
 </style>

@@ -43,13 +43,13 @@
       setTimeout(()=>{
         new BScroll('.navigator', {
           click: true,
-          startY: 0
         })
+      },100)
+      setTimeout(()=>{
         new BScroll('.detail', {
           click: true,
-          startY: 0
         })
-      },50)
+      },100)
       this.$store.dispatch('getClassifyData')
     },
     computed:{
@@ -61,7 +61,6 @@
     methods:{
       currentIndex(index){
         this.$store.dispatch('getNavIndex',index)
-        console.log(this.navindex);
       }
     }
   }
@@ -70,7 +69,7 @@
 <style lang="stylus" rel="stylesheet/stylus" scoped>
   @import "../../common/stylus/mixins.styl"
   #classify
-    background-color #fff
+    width 100%
     #header
       background-color #fff
       bottom-border-1px(#e4e4e4)
@@ -97,6 +96,7 @@
         .iconfont
           font-size 20px
     #content
+      background-color #fff
       display flex
       justify-content center
       width 100%
@@ -104,7 +104,7 @@
       margin-top 45px
       .navigator
         width 80px
-        height 550px
+        height 580px
         border-right: 1px solid #e4e4e4
         .navList
           padding-top 15px
@@ -121,8 +121,8 @@
               font-size 17px
               border-left 2px solid #b4282d
       .detail
-        width 275px
-        height 550px
+        width 80%
+        height 530px
         padding 20px 10px
         .detailImg
           width 275px

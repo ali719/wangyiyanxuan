@@ -21,12 +21,12 @@
       <!--严选LOOK-->
       <div class="look">
         <div class="lookTop">严选LOOK</div>
-        <img class="lookImg" v-lazy="thing.yxLook.picUrl" alt="">
-        <div class="lookAuthor">
-          <img v-lazy="thing.yxLook.avatar" alt="">
+        <img v-if="thing.yxLook" class="lookImg" src="./images/look.jpg" alt="">
+        <div class="lookAuthor" v-if="thing.yxLook">
+          <img :src="thing.yxLook.avatar" alt="">
           <span>{{thing.yxLook.nickname}}</span>
         </div>
-        <div class="lookText">{{thing.yxLook.content}}</div>
+        <div class="lookText" v-if="thing.yxLook">{{thing.yxLook.content}}</div>
       </div>
       <!--更多精彩-->
       <More :yxWeek="thing.yxWeek"/>
@@ -70,12 +70,15 @@
       width 100%
       margin-top 45px
       padding-bottom 55px
-      background-color #F2F5F4
       .banWrap
         background-color #fff
         width 100%
         height 190px
         padding 15px 0
+        padding-left 10px
+      .articleWrap
+        width 100%-10px
+        padding-left 10px
       .look
         width 100%
         height 560px

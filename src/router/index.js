@@ -9,6 +9,9 @@ import Classify from '../pages/Classify/Classify.vue'
 import Person from '../pages/Person/Person.vue'
 import ShopCart from '../pages/ShopCart/ShopCart.vue'
 import Thing from '../pages/Thing/Thing.vue'
+import PhoneLogin from '../pages/Person/phoneLogin/phoneLogin.vue'
+import EmailLogin from '../pages/Person/emailLogin/emailLogin.vue'
+import LoginReg from '../pages/Person/loginReg/loginReg.vue'
 Vue.use(VueRouter)
 
 export default new VueRouter({
@@ -45,6 +48,24 @@ export default new VueRouter({
     {
       path:'/person',
       component:Person,
+      children:[
+        {
+          path: '/person/phone',
+          component: PhoneLogin,
+        },
+        {
+          path: '/person/email',
+          component: EmailLogin,
+        },
+        {
+          path: '/person/logreg',
+          component: LoginReg,
+        },
+        {
+          path:'',
+          redirect:'/person/logreg'
+        },
+      ]
     },
     {
       path:'/',
