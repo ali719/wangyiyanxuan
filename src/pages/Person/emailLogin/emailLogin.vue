@@ -63,6 +63,7 @@
         input
           height 30px
           font-size 14px
+          border none
           outline none
       .message
         margin-top 10px
@@ -72,6 +73,7 @@
         input
           height 30px
           font-size 14px
+          border none
           outline none
       .pro_pwd
         margin-top 15px

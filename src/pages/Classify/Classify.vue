@@ -70,6 +70,8 @@
   @import "../../common/stylus/mixins.styl"
   #classify
     width 100%
+    height 100%
+    overflow hidden
     #header
       background-color #fff
       bottom-border-1px(#e4e4e4)
@@ -100,11 +102,12 @@
       display flex
       justify-content center
       width 100%
-      padding-bottom 50px
+      height 572px
+      overflow hidden
       margin-top 45px
+      margin-bottom 50px
       .navigator
         width 80px
-        height 580px
         border-right: 1px solid #e4e4e4
         .navList
           padding-top 15px
@@ -122,7 +125,6 @@
               border-left 2px solid #b4282d
       .detail
         width 80%
-        height 530px
         padding 20px 10px
         .detailImg
           width 275px

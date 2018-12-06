@@ -12,6 +12,8 @@ import Thing from '../pages/Thing/Thing.vue'
 import PhoneLogin from '../pages/Person/phoneLogin/phoneLogin.vue'
 import EmailLogin from '../pages/Person/emailLogin/emailLogin.vue'
 import LoginReg from '../pages/Person/loginReg/loginReg.vue'
+import Personal from '../pages/personal/personal.vue'
+
 Vue.use(VueRouter)
 
 export default new VueRouter({
@@ -66,6 +68,10 @@ export default new VueRouter({
           redirect:'/person/logreg'
         },
       ]
+    },
+    {
+      path:'/personal',
+      component:Personal
     },
     {
       path:'/',

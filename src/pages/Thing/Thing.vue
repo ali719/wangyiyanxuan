@@ -30,7 +30,6 @@
       </div>
       <!--更多精彩-->
       <More :yxWeek="thing.yxWeek"/>
-      <div></div>
     </section>
   </div>
 </template>
@@ -69,15 +68,16 @@
     #content
       width 100%
       margin-top 45px
-      padding-bottom 55px
       .banWrap
         background-color #fff
         width 100%
-        height 190px
+        box-sizing border-box
+        height 220px
         padding 15px 0
         padding-left 10px
       .articleWrap
         width 100%-10px
+        margin-top 15px
         padding-left 10px
       .look
         width 100%
